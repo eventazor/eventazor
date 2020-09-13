@@ -1,0 +1,25 @@
+Started GET "/" for ::1 at 2020-09-13 15:40:04 +0530
+  
+SyntaxError (/home/anshu/eventazor/app/controllers/home_controller.rb:3: syntax error, unexpected ':', expecting keyword_end
+    layout: false
+          ^):
+  
+app/controllers/home_controller.rb:3: syntax error, unexpected ':', expecting keyword_end
+Started GET "/" for ::1 at 2020-09-13 15:40:54 +0530
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 498ms
+
+
+  
+ActionView::MissingTemplate (Missing template home/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/anshu/eventazor/app/views"
+):
+  
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-09-13 15:45:01 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (1.4ms)
+Completed 200 OK in 5ms (Views: 4.2ms)
+
+

@@ -1,0 +1,169 @@
+# Logfile created on 2020-09-13 15:26:05 +0530 by logger.rb/61378
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-09-13 15:26:05 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [b73f6246] Running /usr/bin/env mkdir -p /tmp as root@159.65.147.10
+ DEBUG [b73f6246] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-09-13 16:22:42 +0530 cap production depoy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-09-13 16:22:44 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [6ae2dd57] Running /usr/bin/env mkdir -p /tmp as root@159.65.147.10
+ DEBUG [6ae2dd57] Command: /usr/bin/env mkdir -p /tmp
+  INFO [6ae2dd57] Finished in 11.335 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-eventazor-production-anshu.sh 0.0%
+  INFO Uploading /tmp/git-ssh-eventazor-production-anshu.sh 100.0%
+  INFO [7864609d] Running /usr/bin/env chmod 700 /tmp/git-ssh-eventazor-production-anshu.sh as root@159.65.147.10
+ DEBUG [7864609d] Command: /usr/bin/env chmod 700 /tmp/git-ssh-eventazor-production-anshu.sh
+  INFO [7864609d] Finished in 0.179 seconds with exit status 0 (successful).
+  INFO [056961b8] Running /usr/bin/env git ls-remote https://github.com/eventazor/eventazor.git HEAD as root@159.65.147.10
+ DEBUG [056961b8] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-eventazor-production-anshu.sh" ; /usr/bin/env git ls-remote https://github.com/eventazor/eventazor.git HEAD )
+ DEBUG [056961b8] 	4e3a5d9b6fd122350dbcc55bfda614db1424f84b	HEAD
+  INFO [056961b8] Finished in 1.106 seconds with exit status 0 (successful).
+  INFO [c543349c] Running /usr/bin/env mkdir -p /var/www/eventazor/shared /var/www/eventazor/releases as root@159.65.147.10
+ DEBUG [c543349c] Command: /usr/bin/env mkdir -p /var/www/eventazor/shared /var/www/eventazor/releases
+  INFO [c543349c] Finished in 0.210 seconds with exit status 0 (successful).
+  INFO [c9c78d65] Running /usr/bin/env mkdir -p /var/www/eventazor/shared/log /var/www/eventazor/shared/tmp/pids /var/www/eventazor/shared/tmp/cache /var/www/eventazor/shared/tmp/sockets /var/www/eventazor/shared/vendor/bundle /var/www/eventazor/shared/.bundle /var/www/eventazor/shared/public/system /var/www/eventazor/shared/public/uploads as root@159.65.147.10
+ DEBUG [c9c78d65] Command: /usr/bin/env mkdir -p /var/www/eventazor/shared/log /var/www/eventazor/shared/tmp/pids /var/www/eventazor/shared/tmp/cache /var/www/eventazor/shared/tmp/sockets /var/www/eventazor/shared/vendor/bundle /var/www/eventazor/shared/.bundle /var/www/eventazor/shared/public/system /var/www/eventazor/shared/public/uploads
+  INFO [c9c78d65] Finished in 0.260 seconds with exit status 0 (successful).
+ DEBUG [1b8533d6] Running [ -f /var/www/eventazor/current/REVISION ] as root@159.65.147.10
+ DEBUG [1b8533d6] Command: [ -f /var/www/eventazor/current/REVISION ]
+ DEBUG [1b8533d6] Finished in 0.228 seconds with exit status 1 (failed).
+ DEBUG [6e923982] Running [ -f /var/www/eventazor/repo/HEAD ] as root@159.65.147.10
+ DEBUG [6e923982] Command: [ -f /var/www/eventazor/repo/HEAD ]
+ DEBUG [6e923982] Finished in 0.249 seconds with exit status 1 (failed).
+ DEBUG [394a0560] Running if test ! -d /var/www/eventazor; then echo "Directory does not exist '/var/www/eventazor'" 1>&2; false; fi as root@159.65.147.10
+ DEBUG [394a0560] Command: if test ! -d /var/www/eventazor; then echo "Directory does not exist '/var/www/eventazor'" 1>&2; false; fi
+ DEBUG [394a0560] Finished in 0.199 seconds with exit status 0 (successful).
+  INFO [9b9058a1] Running /usr/bin/env git clone --mirror https://github.com/eventazor/eventazor.git /var/www/eventazor/repo as root@159.65.147.10
+ DEBUG [9b9058a1] Command: cd /var/www/eventazor && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-eventazor-production-anshu.sh" ; /usr/bin/env git clone --mirror https://github.com/eventazor/eventazor.git /var/www/eventazor/repo )
+ DEBUG [9b9058a1] 	Cloning into bare repository '/var/www/eventazor/repo'...
+  INFO [9b9058a1] Finished in 1.976 seconds with exit status 0 (successful).
+ DEBUG [35a8c675] Running if test ! -d /var/www/eventazor/repo; then echo "Directory does not exist '/var/www/eventazor/repo'" 1>&2; false; fi as root@159.65.147.10
+ DEBUG [35a8c675] Command: if test ! -d /var/www/eventazor/repo; then echo "Directory does not exist '/var/www/eventazor/repo'" 1>&2; false; fi
+ DEBUG [35a8c675] Finished in 0.216 seconds with exit status 0 (successful).
+  INFO [5b87de15] Running /usr/bin/env git remote set-url origin https://github.com/eventazor/eventazor.git as root@159.65.147.10
+ DEBUG [5b87de15] Command: cd /var/www/eventazor/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-eventazor-production-anshu.sh" ; /usr/bin/env git remote set-url origin https://github.com/eventazor/eventazor.git )
+  INFO [5b87de15] Finished in 0.215 seconds with exit status 0 (successful).
+  INFO [3bca9e35] Running /usr/bin/env git remote update --prune as root@159.65.147.10
+ DEBUG [3bca9e35] Command: cd /var/www/eventazor/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-eventazor-production-anshu.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [3bca9e35] 	Fetching origin
+  INFO [3bca9e35] Finished in 1.190 seconds with exit status 0 (successful).
+ DEBUG [65b29f8e] Running if test ! -d /var/www/eventazor/repo; then echo "Directory does not exist '/var/www/eventazor/repo'" 1>&2; false; fi as root@159.65.147.10
+ DEBUG [65b29f8e] Command: if test ! -d /var/www/eventazor/repo; then echo "Directory does not exist '/var/www/eventazor/repo'" 1>&2; false; fi
+ DEBUG [65b29f8e] Finished in 0.191 seconds with exit status 0 (successful).
+  INFO [d68c2c23] Running /usr/bin/env mkdir -p /var/www/eventazor/releases/20200913105258 as root@159.65.147.10
+ DEBUG [d68c2c23] Command: cd /var/www/eventazor/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-eventazor-production-anshu.sh" ; /usr/bin/env mkdir -p /var/www/eventazor/releases/20200913105258 )
+  INFO [d68c2c23] Finished in 0.200 seconds with exit status 0 (successful).
+  INFO [f4557a4f] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/eventazor/releases/20200913105258 as root@159.65.147.10
+ DEBUG [f4557a4f] Command: cd /var/www/eventazor/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-eventazor-production-anshu.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/eventazor/releases/20200913105258 )
+  INFO [f4557a4f] Finished in 0.258 seconds with exit status 0 (successful).
+ DEBUG [2288a2bf] Running if test ! -d /var/www/eventazor/repo; then echo "Directory does not exist '/var/www/eventazor/repo'" 1>&2; false; fi as root@159.65.147.10
+ DEBUG [2288a2bf] Command: if test ! -d /var/www/eventazor/repo; then echo "Directory does not exist '/var/www/eventazor/repo'" 1>&2; false; fi
+ DEBUG [2288a2bf] Finished in 0.223 seconds with exit status 0 (successful).
+ DEBUG [b8f713f3] Running /usr/bin/env git rev-list --max-count=1 master as root@159.65.147.10
+ DEBUG [b8f713f3] Command: cd /var/www/eventazor/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-eventazor-production-anshu.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [b8f713f3] 	4e3a5d9b6fd122350dbcc55bfda614db1424f84b
+ DEBUG [b8f713f3] Finished in 0.209 seconds with exit status 0 (successful).
+ DEBUG [d50befdb] Running if test ! -d /var/www/eventazor/releases/20200913105258; then echo "Directory does not exist '/var/www/eventazor/releases/20200913105258'" 1>&2; false; fi as root@159.65.147.10
+ DEBUG [d50befdb] Command: if test ! -d /var/www/eventazor/releases/20200913105258; then echo "Directory does not exist '/var/www/eventazor/releases/20200913105258'" 1>&2; false; fi
+ DEBUG [d50befdb] Finished in 0.154 seconds with exit status 0 (successful).
+  INFO [d73c780b] Running /usr/bin/env echo "4e3a5d9b6fd122350dbcc55bfda614db1424f84b" > REVISION as root@159.65.147.10
+ DEBUG [d73c780b] Command: cd /var/www/eventazor/releases/20200913105258 && /usr/bin/env echo "4e3a5d9b6fd122350dbcc55bfda614db1424f84b" > REVISION
+  INFO [d73c780b] Finished in 0.227 seconds with exit status 0 (successful).
+  INFO [cfc72f3a] Running /usr/bin/env mkdir -p /var/www/eventazor/releases/20200913105258 /var/www/eventazor/releases/20200913105258/tmp /var/www/eventazor/releases/20200913105258/vendor /var/www/eventazor/releases/20200913105258/public as root@159.65.147.10
+ DEBUG [cfc72f3a] Command: /usr/bin/env mkdir -p /var/www/eventazor/releases/20200913105258 /var/www/eventazor/releases/20200913105258/tmp /var/www/eventazor/releases/20200913105258/vendor /var/www/eventazor/releases/20200913105258/public
+  INFO [cfc72f3a] Finished in 0.301 seconds with exit status 0 (successful).
+ DEBUG [4345df73] Running [ -L /var/www/eventazor/releases/20200913105258/log ] as root@159.65.147.10
+ DEBUG [4345df73] Command: [ -L /var/www/eventazor/releases/20200913105258/log ]
+ DEBUG [4345df73] Finished in 0.193 seconds with exit status 1 (failed).
+ DEBUG [cfefb7b0] Running [ -d /var/www/eventazor/releases/20200913105258/log ] as root@159.65.147.10
+ DEBUG [cfefb7b0] Command: [ -d /var/www/eventazor/releases/20200913105258/log ]
+ DEBUG [cfefb7b0] Finished in 0.220 seconds with exit status 0 (successful).
+  INFO [d3a78edb] Running /usr/bin/env rm -rf /var/www/eventazor/releases/20200913105258/log as root@159.65.147.10
+ DEBUG [d3a78edb] Command: /usr/bin/env rm -rf /var/www/eventazor/releases/20200913105258/log
+  INFO [d3a78edb] Finished in 0.217 seconds with exit status 0 (successful).
+  INFO [f4e0ed5e] Running /usr/bin/env ln -s /var/www/eventazor/shared/log /var/www/eventazor/releases/20200913105258/log as root@159.65.147.10
+ DEBUG [f4e0ed5e] Command: /usr/bin/env ln -s /var/www/eventazor/shared/log /var/www/eventazor/releases/20200913105258/log
+  INFO [f4e0ed5e] Finished in 0.235 seconds with exit status 0 (successful).
+ DEBUG [82d7f2a5] Running [ -L /var/www/eventazor/releases/20200913105258/tmp/pids ] as root@159.65.147.10
+ DEBUG [82d7f2a5] Command: [ -L /var/www/eventazor/releases/20200913105258/tmp/pids ]
+ DEBUG [82d7f2a5] Finished in 0.175 seconds with exit status 1 (failed).
+ DEBUG [659e89b7] Running [ -d /var/www/eventazor/releases/20200913105258/tmp/pids ] as root@159.65.147.10
+ DEBUG [659e89b7] Command: [ -d /var/www/eventazor/releases/20200913105258/tmp/pids ]
+ DEBUG [659e89b7] Finished in 0.265 seconds with exit status 1 (failed).
+  INFO [006d8db5] Running /usr/bin/env ln -s /var/www/eventazor/shared/tmp/pids /var/www/eventazor/releases/20200913105258/tmp/pids as root@159.65.147.10
+ DEBUG [006d8db5] Command: /usr/bin/env ln -s /var/www/eventazor/shared/tmp/pids /var/www/eventazor/releases/20200913105258/tmp/pids
+  INFO [006d8db5] Finished in 0.216 seconds with exit status 0 (successful).
+ DEBUG [21a18ced] Running [ -L /var/www/eventazor/releases/20200913105258/tmp/cache ] as root@159.65.147.10
+ DEBUG [21a18ced] Command: [ -L /var/www/eventazor/releases/20200913105258/tmp/cache ]
+ DEBUG [21a18ced] Finished in 0.199 seconds with exit status 1 (failed).
+ DEBUG [a2a294aa] Running [ -d /var/www/eventazor/releases/20200913105258/tmp/cache ] as root@159.65.147.10
+ DEBUG [a2a294aa] Command: [ -d /var/www/eventazor/releases/20200913105258/tmp/cache ]
+ DEBUG [a2a294aa] Finished in 0.195 seconds with exit status 1 (failed).
+  INFO [8170105f] Running /usr/bin/env ln -s /var/www/eventazor/shared/tmp/cache /var/www/eventazor/releases/20200913105258/tmp/cache as root@159.65.147.10
+ DEBUG [8170105f] Command: /usr/bin/env ln -s /var/www/eventazor/shared/tmp/cache /var/www/eventazor/releases/20200913105258/tmp/cache
+  INFO [8170105f] Finished in 0.153 seconds with exit status 0 (successful).
+ DEBUG [3bb848b2] Running [ -L /var/www/eventazor/releases/20200913105258/tmp/sockets ] as root@159.65.147.10
+ DEBUG [3bb848b2] Command: [ -L /var/www/eventazor/releases/20200913105258/tmp/sockets ]
+ DEBUG [3bb848b2] Finished in 0.199 seconds with exit status 1 (failed).
+ DEBUG [3fc3eced] Running [ -d /var/www/eventazor/releases/20200913105258/tmp/sockets ] as root@159.65.147.10
+ DEBUG [3fc3eced] Command: [ -d /var/www/eventazor/releases/20200913105258/tmp/sockets ]
+ DEBUG [3fc3eced] Finished in 0.206 seconds with exit status 1 (failed).
+  INFO [64eeedc5] Running /usr/bin/env ln -s /var/www/eventazor/shared/tmp/sockets /var/www/eventazor/releases/20200913105258/tmp/sockets as root@159.65.147.10
+ DEBUG [64eeedc5] Command: /usr/bin/env ln -s /var/www/eventazor/shared/tmp/sockets /var/www/eventazor/releases/20200913105258/tmp/sockets
+  INFO [64eeedc5] Finished in 0.230 seconds with exit status 0 (successful).
+ DEBUG [8c5a11f9] Running [ -L /var/www/eventazor/releases/20200913105258/vendor/bundle ] as root@159.65.147.10
+ DEBUG [8c5a11f9] Command: [ -L /var/www/eventazor/releases/20200913105258/vendor/bundle ]
+ DEBUG [8c5a11f9] Finished in 0.220 seconds with exit status 1 (failed).
+ DEBUG [8d1f515f] Running [ -d /var/www/eventazor/releases/20200913105258/vendor/bundle ] as root@159.65.147.10
+ DEBUG [8d1f515f] Command: [ -d /var/www/eventazor/releases/20200913105258/vendor/bundle ]
+ DEBUG [8d1f515f] Finished in 0.316 seconds with exit status 1 (failed).
+  INFO [4dd5614f] Running /usr/bin/env ln -s /var/www/eventazor/shared/vendor/bundle /var/www/eventazor/releases/20200913105258/vendor/bundle as root@159.65.147.10
+ DEBUG [4dd5614f] Command: /usr/bin/env ln -s /var/www/eventazor/shared/vendor/bundle /var/www/eventazor/releases/20200913105258/vendor/bundle
+  INFO [4dd5614f] Finished in 0.178 seconds with exit status 0 (successful).
+ DEBUG [bb0c4fbc] Running [ -L /var/www/eventazor/releases/20200913105258/.bundle ] as root@159.65.147.10
+ DEBUG [bb0c4fbc] Command: [ -L /var/www/eventazor/releases/20200913105258/.bundle ]
+ DEBUG [bb0c4fbc] Finished in 0.214 seconds with exit status 1 (failed).
+ DEBUG [7ca52b9f] Running [ -d /var/www/eventazor/releases/20200913105258/.bundle ] as root@159.65.147.10
+ DEBUG [7ca52b9f] Command: [ -d /var/www/eventazor/releases/20200913105258/.bundle ]
+ DEBUG [7ca52b9f] Finished in 0.223 seconds with exit status 1 (failed).
+  INFO [326266db] Running /usr/bin/env ln -s /var/www/eventazor/shared/.bundle /var/www/eventazor/releases/20200913105258/.bundle as root@159.65.147.10
+ DEBUG [326266db] Command: /usr/bin/env ln -s /var/www/eventazor/shared/.bundle /var/www/eventazor/releases/20200913105258/.bundle
+  INFO [326266db] Finished in 0.220 seconds with exit status 0 (successful).
+ DEBUG [1d63c937] Running [ -L /var/www/eventazor/releases/20200913105258/public/system ] as root@159.65.147.10
+ DEBUG [1d63c937] Command: [ -L /var/www/eventazor/releases/20200913105258/public/system ]
+ DEBUG [1d63c937] Finished in 0.183 seconds with exit status 1 (failed).
+ DEBUG [5c98062f] Running [ -d /var/www/eventazor/releases/20200913105258/public/system ] as root@159.65.147.10
+ DEBUG [5c98062f] Command: [ -d /var/www/eventazor/releases/20200913105258/public/system ]
+ DEBUG [5c98062f] Finished in 0.208 seconds with exit status 1 (failed).
+  INFO [a7e06d2c] Running /usr/bin/env ln -s /var/www/eventazor/shared/public/system /var/www/eventazor/releases/20200913105258/public/system as root@159.65.147.10
+ DEBUG [a7e06d2c] Command: /usr/bin/env ln -s /var/www/eventazor/shared/public/system /var/www/eventazor/releases/20200913105258/public/system
+  INFO [a7e06d2c] Finished in 0.195 seconds with exit status 0 (successful).
+ DEBUG [e33e75cc] Running [ -L /var/www/eventazor/releases/20200913105258/public/uploads ] as root@159.65.147.10
+ DEBUG [e33e75cc] Command: [ -L /var/www/eventazor/releases/20200913105258/public/uploads ]
+ DEBUG [e33e75cc] Finished in 0.191 seconds with exit status 1 (failed).
+ DEBUG [f784fa50] Running [ -d /var/www/eventazor/releases/20200913105258/public/uploads ] as root@159.65.147.10
+ DEBUG [f784fa50] Command: [ -d /var/www/eventazor/releases/20200913105258/public/uploads ]
+ DEBUG [f784fa50] Finished in 0.214 seconds with exit status 1 (failed).
+  INFO [376dca80] Running /usr/bin/env ln -s /var/www/eventazor/shared/public/uploads /var/www/eventazor/releases/20200913105258/public/uploads as root@159.65.147.10
+ DEBUG [376dca80] Command: /usr/bin/env ln -s /var/www/eventazor/shared/public/uploads /var/www/eventazor/releases/20200913105258/public/uploads
+  INFO [376dca80] Finished in 0.208 seconds with exit status 0 (successful).
+  INFO [5894929c] Running /usr/bin/env ln -s /var/www/eventazor/releases/20200913105258 /var/www/eventazor/releases/current as root@159.65.147.10
+ DEBUG [5894929c] Command: /usr/bin/env ln -s /var/www/eventazor/releases/20200913105258 /var/www/eventazor/releases/current
+  INFO [5894929c] Finished in 0.187 seconds with exit status 0 (successful).
+  INFO [b7802c4b] Running /usr/bin/env mv /var/www/eventazor/releases/current /var/www/eventazor as root@159.65.147.10
+ DEBUG [b7802c4b] Command: /usr/bin/env mv /var/www/eventazor/releases/current /var/www/eventazor
+  INFO [b7802c4b] Finished in 0.235 seconds with exit status 0 (successful).
+ DEBUG [45ee7936] Running /usr/bin/env ls -x /var/www/eventazor/releases as root@159.65.147.10
+ DEBUG [45ee7936] Command: /usr/bin/env ls -x /var/www/eventazor/releases
+ DEBUG [45ee7936] 	20200913105258
+ DEBUG [45ee7936] Finished in 0.225 seconds with exit status 0 (successful).
+ DEBUG [120b6802] Running if test ! -d /var/www/eventazor/releases; then echo "Directory does not exist '/var/www/eventazor/releases'" 1>&2; false; fi as root@159.65.147.10
+ DEBUG [120b6802] Command: if test ! -d /var/www/eventazor/releases; then echo "Directory does not exist '/var/www/eventazor/releases'" 1>&2; false; fi
+ DEBUG [120b6802] Finished in 0.158 seconds with exit status 0 (successful).
+  INFO [d29831ce] Running /usr/bin/env echo "Branch master (at 4e3a5d9b6fd122350dbcc55bfda614db1424f84b) deployed as release 20200913105258 by anshu" >> /var/www/eventazor/revisions.log as root@159.65.147.10
+ DEBUG [d29831ce] Command: cd /var/www/eventazor/releases && /usr/bin/env echo "Branch master (at 4e3a5d9b6fd122350dbcc55bfda614db1424f84b) deployed as release 20200913105258 by anshu" >> /var/www/eventazor/revisions.log
+  INFO [d29831ce] Finished in 0.236 seconds with exit status 0 (successful).
