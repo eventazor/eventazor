@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eventazor Pvt Ltd - Event Planner</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background:#f9f6ea;
+    }
+    .font-20 {
+      font-size: 20px;
+    }
+    .font-18 {
+      font-size: 18px;
+    }
+    .font-16 {
+      font-size:16px;
+    }
+    .fw600 {
+      font-weight: 600;
+    }
+    .no-pad {
+      padding: 0;
+    }
+    .marg-top-25 {
+      margin-top: 25px;
+    }
+    ul.header {
+      margin-top: 10px;
+    }
+    ul.header li a span {
+      margin-left: 10px;
+    }
+    .title_color {
+      color: #48487f;
+    }
+    .company_detail {
+      padding: 50px 120px;
+      margin: 20px 0;
+      text-align: center;
+      background: #ddd;
+    }
+    .hr_detail {
+      border: 1px solid black;
+      margin: 0 auto 16px;
+      width: 50px;
+    }
+    .services {
+      padding: 50px;
+      margin-bottom: 20px;
+      background: #48487f;
+      color: #fff;
+    }
+    /*slide show*/
+    * {box-sizing:border-box}
+    .slideshow-container {
+      position: relative;
+      margin: auto;
+    }
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    @-webkit-keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-xs-12 no-pad">
+        <nav class="navbar fixed-top navbar-light bg-light">
+          <h1 class="pull-left title_color" style="font-size:28px;">EventAzor Pvt Ltd</h1>
+          <ul class="pull-right nav navbar-nav header">
+            <li><a href="https://api.whatsapp.com/send?phone=8863024700" class="font-20 title_color" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a></li>
+            <li><a href="tel:8863024700" class="font-20 title_color"><i class="fa fa-phone" aria-hidden="true"></i><span>Call Now</span></a></li>
+            <li><a href="https://www.google.com/maps/dir//%2728.6129675,77.2896725%27" class="font-20 title_color" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i><span>Get Directions</span></a></li>
+          </ul>     
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="container no-pad">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="https://eventazor.com/slider_img_1.jpeg" alt="wedding" style="width:100%;">
+        </div>
+        <div class="item">
+          <img src="https://eventazor.com/slider_img_2.jpeg" alt="corporate event" style="width:100%;">
+        </div>
+        <div class="item">
+          <img src="https://eventazor.com/slider_img_3.jpeg" alt="Birthday" style="width:100%;">
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-xs-12 col-md-12 no-pad company_detail">
+        <hr class="hr_detail">
+        <p class="fw600 font-18">ONE PLACE FOR ALL EVENTS.</p>
+        <p style="font-size:16px;line-height:1.6;margin-top:30px;">We deal in all types of events all over India with a better cost and luxury service. Our organisation has every team to give best service to you as per your budget and theme. we recommend you to do early booking for your events to avail best offers on that. Our main motto is to provide world class service to our customer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row text-center services">
+      <hr class="hr_detail" style="border:1px solid #fff;">
+      <h2 class="font-20 fw600">Event Planner and Management</h2>
+      <div class="col-md-4 col-lg-4 col-xs-4 marg-top-25">
+        <p class="font-16 fw600" style="min-height:45px;">Branding, Fashion Shows, School Events, College Events</p>
+        <p>We do all types of Event planning as per your budget and provide you the best out of it in all over India.</p>
+      </div>
+      <div class="col-md-4 col-lg-4 col-xs-4 marg-top-25">
+        <p class="font-16 fw600" style="min-height:45px;">Wedding Planner</p>
+        <p>We plan wedding also like destination wedding and all religion wedding in all over India.</p>
+      </div>
+      <div class="col-md-4 col-lg-4 col-xs-4 marg-top-25">
+        <p class="font-16 fw600" style="min-height:45px;">Corporate Events</p>
+        <p>We do meeting, conferences all the events related to corporate in all over India</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="padding:35px 35px 80px 35px;">
+    <div class="row text-center">
+      <hr class="hr_detail">
+      <h2 class="font-20 fw600 text-center">Contact Us</h2>
+      <div class="col-xs-12 col-md-12 col-lg-12 no-pad">
+        <a href="https://www.facebook.com/eventazor/" style="font-size:50px;" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/eventazor_pvt.ltd/" style="font-size:50px;margin-left:25px;color:#3f729b;" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </div>
+      <div class="col-xs-6 col-md-6 col-lg-6 no-pad"></div>
+    </div>
+  </div>
+</body>
+</html>
